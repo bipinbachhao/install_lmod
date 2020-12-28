@@ -1,7 +1,7 @@
 name 'install_lmod'
 maintainer 'Bipin Bachhao'
 maintainer_email 'bipinbachhao@gmail.com'
-license 'Apache 2.0'
+license 'Apache-2.0'
 description 'Installs/Configures install_lmod'
 version '0.1.0'
 chef_version '>= 14.0'

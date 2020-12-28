@@ -1,0 +1,11 @@
+# Default attributes
+default['install_lmod']['version'] = '8.4.18'
+default['install_lmod']['lua_version'] = '5.3'
+default['install_lmod']['download_url'] = "https://github.com/TACC/Lmod/archive/#{node['install_lmod']['version']}.tar.gz"
+default['install_lmod']['install_root'] = '/opt/lmod'
+default['install_lmod']['prefix'] = "#{node['install_lmod']['install_root']}/lmod-#{node['install_lmod']['version']}"
+default['install_lmod']['lmod_module_root_path'] = "#{node['install_lmod']['prefix']}/modulefiles"
+default['install_lmod']['lmod_spider_cache_dir'] = "#{node['install_lmod']['lmod_module_root_path']}/.spider-cache"
+default['install_lmod']['lmod_spider_cache_stamp_file'] = "#{node['install_lmod']['lmod_module_root_path']}/.spider-cache.stamp"
+default['install_lmod']['lmod_init_bash_file'] = 'z00-lmod.sh'
+default['install_lmod']['lmod_init_csh_file'] = 'z00-lmod.csh'

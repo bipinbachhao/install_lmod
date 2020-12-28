@@ -10,7 +10,7 @@ name 'install_lmod'
 default_source :supermarket
 
 # run_list: chef-client will run these recipes in the order specified.
-run_list 'install_lmod::default'
+run_list 'install_lmod::prerequisites', 'install_lmod::default'
 
 # Specify a custom source for a single cookbook:
 cookbook 'install_lmod', path: '.'
