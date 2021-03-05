@@ -20,7 +20,7 @@ when 'amazon', 'fedora', 'rhel'
     not_if 'dnf repolist|grep -qi "powertools"'
   end
 
-  package 'epel-release' if platform?('centos')
+  package 'epel-release' if platform?('centos', 'fedora')
 
   execute 'Enable_Epel_Repo' do
     command 'amazon-linux-extras install epel -y'
